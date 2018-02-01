@@ -2,10 +2,35 @@
 	<div class="row">
 		<div class="col-sm-12">
 		<template v-if="!user.isVolunteer">
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSf3k-NkzCSvCfy-ywt1ayu2rHYGOIfts8gcaJPINROoywR6rg/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+			<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Leave Feedback</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 		</template>
 		<template v-else>
-			<iframe src="https://docs.google.com/forms/d/e/1FAIpQLSc9doxOTqCcf5286LWPl3SYuJalBw3MurgkRJvrsod8ZId0tw/viewform?embedded=true" width="100%" height="1000" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+			
+					<form>
+  <div class="form-group">
+    <label for="exampleInputEmail1">Email address</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+  </div>
+   <div class="form-group">
+    <label for="exampleFormControlTextarea1">Leave Feedback</label>
+    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+  </div>
+  
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
 		</template>
 		</div>
 	</div>

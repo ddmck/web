@@ -16,6 +16,12 @@
       <input type="text" v-model="user.lastname" v-show="'lastname' === activeEdit">
       <button @click="editField('lastname')">{{ fieldButtons.lastname }}</button>
     </div>
+    <div class="phone">
+      <span>Phone Number:</span>
+      <span v-show="'phone' !== activeEdit">{{ user.phone }}</span>
+      <input type="text" v-model="user.phone" v-show="'phone' === activeEdit">
+       <button @click="editField('phone')">{{ fieldButtons.phone }}</button>
+    </div>
   </div>
 
   <div class="email">

@@ -55,7 +55,14 @@
         </div>
       </div>
     </ul>
-
+    <ul class="row form-group" v-if='user.isVolunteer'>
+      <p>Your phone number</p>
+      <div class="row">
+        <div class="col-sm-6">
+          <input type="text" v-model="user.phone" class="form-control" id="phone" required autofocus>
+          <label for="phone">Phone number with no parenthesis</label>
+        </div>
+      </div>
     <ul class="row form-group" v-if="!user.isVolunteer">
       <p>Your gender</p>
       <div class="row">
@@ -326,6 +333,9 @@ export default {
           this.error = 'Profile picture URL is invalid';
         } else if (!this.user.birthdate || this.user.birthdate === ''){
           this.error = 'Please provide your birthday'
+        } //Phone number addition 
+          else if (!this.user.phone || this.user.phone === ''){
+          this.error = 'Please enter a phone number'
         } else if (birthdateValidation !== true){
           this.error = birthdateValidation;
         } else if (!this.user.gender || this.user.gender === ''){
