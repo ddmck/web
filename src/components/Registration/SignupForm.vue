@@ -10,7 +10,7 @@
       <div class="description">You will be sent a verification email</div>
       <label for="inputPassword">Create a password</label>
       <input type="password" id="inputPassword" class="form-control" required v-model="credentials.password">
-      <p class="password-guidelines">It must contain lowercase and uppercase letters, numbers, and at least 8 characters.</p>
+      <p class="password-guidelines">Password must contain lowercase and uppercase letters, numbers, and at least 8 characters.</p>
       <button class="btn btn-lg btn-primary btn-block" type="submit" @click.prevent="submit()">SIGN UP</button>
       {{msg}}
     </div>
@@ -114,7 +114,7 @@ label {
 }
 
 .password-guidelines {
-  font-size: 12px;
+  font-size: 10px;
   font-weight: 300;
   text-align: left;
   color: #73737A;
