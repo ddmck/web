@@ -41,8 +41,8 @@ export default {
     console.log(id);
     if (!id){
       var type;
-      var sessionURL = ['/session/college','/session/math','/session/science','/session/standardizedtest','/session/esl'];
-      var sessionTypes = ['college', 'math', 'science','standardizedtest','esl'];
+      var sessionURL = ['/session/algebra','/session/geometry','/session/trigonometry','/session/precalculus','/session/calculus','/session/general','/session/counseling','/session/planning','/session/essay','/session/biology','/session/chemistry','/session/sat'];
+      var sessionTypes = ['algebra', 'geometry', 'trigonometry','precalculus','calculus','general','counseling','planning','essay','biology','chemistry','sat'];
       if (sessionURL.indexOf(this.$route.path) !== -1){
         type = sessionTypes[sessionURL.indexOf(this.$route.path)];
       } else {

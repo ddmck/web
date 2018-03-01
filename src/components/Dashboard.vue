@@ -77,8 +77,8 @@ export default {
     let user = UserService.getUser() || {};
     var subtopics = {
       'math': ['Algebra', 'Geometry', 'Trigonometry', 'Precalculus', 'Calculus'],
-      'esl': ['General Help'],
-      'college': ['College Counseling', 'College Planning','Essay Editting'],
+      'esl': ['General'],
+      'college': ['Counseling', 'Planning','Essay'],
       'science': ['Biology','Chemistry'],
       'standardizedtest': ['SAT']
     };
@@ -113,8 +113,10 @@ export default {
     },
     getHelpNext() {
       var topic = this.pickedTopic;
+      var subtopic = this.pickedSubtopic;
+      subtopic = subtopic.toLowerCase();
       topic = topic.toLowerCase();
-      var linkName = '/session/' + topic;
+      var linkName = '/session/' + subtopic;
       this.$router.push(linkName);
     }
   }
