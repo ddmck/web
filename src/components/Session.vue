@@ -39,14 +39,22 @@ export default {
         promise;
 
     console.log(id);
-
     if (!id){
       var type;
-      if (this.$route.path.indexOf('session/college') !== -1){
-        type = 'college'
+      var sessionURL = ['/session/college','/session/math','/session/science','/session/standardizedtest','/session/esl'];
+      var sessionTypes = ['college', 'math', 'science','standardizedtest','esl'];
+      if (sessionURL.indexOf(this.$route.path) !== -1){
+        type = sessionTypes[sessionURL.indexOf(this.$route.path)];
       } else {
-        type = 'math'
+        type = 'misc';
       }
+      //if (sessionTypes.indexOf(this.$route.path) !== -1){
+      // if (this.$route.path.indexOf('session/college') !== -1){
+      //   type = 'college'
+      // } else {
+      //   type = 'math'
+      // }
+
       promise = SessionService.newSession(this, type)
     } else {
       promise = SessionService.useExistingSession(this, id);
